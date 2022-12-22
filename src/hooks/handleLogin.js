@@ -1,6 +1,4 @@
 const HandleLogin = async (email, password) => {
-  console.log("logincalled");
-
   const userData = {
     email,
     password

@@ -1,6 +1,4 @@
-const UpdateBoard = async ({buid, title, description}) => {
-  console.log("update boards called");
-
+const UpdateBoard = async (buid, title, description) => {
   const Data = {
     buid,
     title,

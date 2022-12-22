@@ -1,6 +1,4 @@
 const GetBoards = async (uid, token) => {
-  console.log("get boards called");
-
   const data = {
     uid,
     token,

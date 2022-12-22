@@ -1,5 +1,4 @@
 const AddBoard = async (title, description, token, creator_id) => {
-  console.log("add boards called")
   const Data = {
     title,
     description,

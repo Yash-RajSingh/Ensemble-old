@@ -1,6 +1,4 @@
 const GetLists = async (board_fid) => {
-  console.log("get lists called");
-  
   const data = {
     board_fid
   };

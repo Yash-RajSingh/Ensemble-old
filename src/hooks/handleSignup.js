@@ -1,6 +1,4 @@
 const HandleSignUp = async (username,email,password,sec_question,sec_answer) => {
-  console.log("signup called");
-
   const userData = {
     username,
     email,

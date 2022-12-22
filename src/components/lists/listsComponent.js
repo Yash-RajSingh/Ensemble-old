@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { authContext, updateContext } from "../../context/context";
+import { updateContext } from "../../context/context";
 import GetLists from "../../hooks/getLists";
+import List from "./listsElements/list/list";
+import ListsAdder from "./listsElements/listAdder/listAdder";
 
 const ListsComponent = ({buid}) => {
     const {update, setUpdate} = useContext(updateContext)
@@ -16,7 +18,8 @@ const ListsComponent = ({buid}) => {
     },[update])
     return (
       <>
-        <input type="color" onClick={(e)=> console.log(e.target.value)}/>
+        <ListsAdder />
+        {listData && listData.data.map((element)=> <List data={element} />)}
       </>
     );
 }

@@ -114,6 +114,8 @@ const Login = () => {
                     SignupSecAnswerRef.current.value.toUpperCase()
                   );
                   setModalData(response);
+                      console.log("fired", response);
+
                 }}
               >
                 Signup
@@ -162,8 +164,9 @@ const Login = () => {
                   setModalData(response);
                   if (response.status === 200) {
                     setTimeout(() => {
+                      console.log("fired",response)
                       setAuth(response);
-                      navigate("/boards");
+                      // navigate("/boards");
                     }, 1300);
                   }
                 }}

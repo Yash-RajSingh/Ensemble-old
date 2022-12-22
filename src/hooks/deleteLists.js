@@ -1,8 +1,8 @@
-const DeleteBoard = async (buid) => {
-  const Data ={
-    buid
-  }
-  const BaseUrl = process.env.REACT_APP_DELETE_BOARDS_URL;
+const DeleteList = async (luid) => {
+  const Data = {
+    luid,
+  };
+  const BaseUrl = process.env.REACT_APP_DELETE_LISTS_URL;
   try {
     const request = await fetch(BaseUrl, {
       method: "DELETE",
@@ -18,4 +18,4 @@ const DeleteBoard = async (buid) => {
   }
 };
 
-export default DeleteBoard;
+export default DeleteList;

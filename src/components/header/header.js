@@ -10,7 +10,7 @@ const Header = () => {
   let navigate = useNavigate();
   let param = window.location.href;
   useEffect(() => {
-    if (param.includes("login") || auth) {
+    if (auth || param.includes("login")) {
       setShow(false);
     } else {
       setShow(true);
@@ -20,9 +20,12 @@ const Header = () => {
     <>
       <HeaderContainer id="Header">
         <HeaderTitle>Ensemble</HeaderTitle>
-        {show && (
+        {(show) ? 
           <HeaderButton onClick={() => navigate("/login")}>Login</HeaderButton>
-        )}
+          :
+          <HeaderButton onClick={() => navigate("/boards")}>Workspace</HeaderButton>
+        }
+        
       </HeaderContainer>
     </>
   );
